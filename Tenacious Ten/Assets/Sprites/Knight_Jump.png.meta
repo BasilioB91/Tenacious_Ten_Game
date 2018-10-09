@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: cc02fe5eb3b004e38bdaa467747b69bd
+guid: ed381522fa87740b685662140fb8316e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Bee_0
-    21300002: Bee_1
+    21300000: Knight_Jump_0
+    21300002: Knight_Jump_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -86,13 +86,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bee_0
+      name: Knight_Jump_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 15
-        height: 15
+        x: 0
+        y: 0
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,19 +100,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8567f958acb2489c9622bebb5427096
+      spriteID: e3ab85c6ec57648d6bd3ca92448b306f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bee_1
+      name: Knight_Jump_1
       rect:
         serializedVersion: 2
         x: 17
-        y: 1
-        width: 15
-        height: 14
+        y: 0
+        width: 14
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19de82638b700421fa3833e58316db2d
+      spriteID: 46ddd9a03291f4c9b8fd6dcf384d2134
       vertices: []
       indices: 
       edges: []
@@ -128,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b250adb8ff6f24c398d4e8bc110f2c4a
+    spriteID: 21b627b34d4c140ba90342fc6812107b
     vertices: []
     indices: 
     edges: []

@@ -5,38 +5,36 @@ using UnityEngine;
 
 public class Knight_Move : MonoBehaviour {
     public Animator animator;
-    public int playerSpeed = 5;
-    private bool facingRight = true;
-    public int jumpPower = 1200;
-    public float moveX;
+    public CharacterController2D controller;
+    bool jumping = false;
+    public float playerSpeed = 40f;
+    float horizontalMove = 0f;
 
 
+    void Move_Player()
+    {
 
-    void Move_Player(){
-        moveX = Input.GetAxis("Horizontal");
-        animator.SetFloat("Speed", Mathf.Abs(moveX*playerSpeed));
-        if (Input.GetButtonDown("Jump")){
-            jump();
+        horizontalMove = playerSpeed * Input.GetAxis("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        if (Input.GetButtonDown("Jump"))
+        {
+            //jump();
+            jumping = true;
+            animator.SetBool("IsJumping", true);
         }
-        if(moveX < 0.0f && facingRight==true){
-            flipPlayer();
-        }
-        else if(moveX > 0.0f && facingRight==false){
-            flipPlayer();
-        }
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
-    void flipPlayer(){
-        facingRight = !facingRight;
-        Vector2 localScale = gameObject.transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
-    }
-    void jump(){
-        GetComponent<Rigidbody2D>().AddForce (Vector2.up * jumpPower);
-    }
-	// Update is called once per frame
-	void Update () {
+
+    void Update()
+    {
         Move_Player();
     }
+    void FixedUpdate()
+    {
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jumping);
+        jumping = false;
+    }
+    public void OnLanding(){
+        animator.SetBool("IsJumping", false);
+    }
+
 }
