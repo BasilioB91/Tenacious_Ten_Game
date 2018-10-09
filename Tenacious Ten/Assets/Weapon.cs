@@ -25,8 +25,5 @@ public class Weapon : MonoBehaviour {
         animator.SetBool("IsShooting", false);
     }
 
-    private void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        Debug.Log(hitInfo.name);
-    }
+
 }
