@@ -26,7 +26,7 @@ public class HorizontalEnemyMove : MonoBehaviour {
 		if (transform.position.x <= startingPosition.x -distance)
 		{
 			mover *= -1;
-		}
+        }
 		if (transform.position.x >= startingPosition.x)
 		{
 			mover *= -1;
