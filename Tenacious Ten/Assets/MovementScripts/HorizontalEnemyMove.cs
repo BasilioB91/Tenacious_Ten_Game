@@ -9,15 +9,17 @@ public class HorizontalEnemyMove : MonoBehaviour {
 	Vector2 startingPosition;
 	[SerializeField]
 	float distance;
+    bool facingLeft = false;
 
 	// Use this for initialization
 	void Start () {
 		startingPosition = transform.position;
+
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	void FixedUpdate()
