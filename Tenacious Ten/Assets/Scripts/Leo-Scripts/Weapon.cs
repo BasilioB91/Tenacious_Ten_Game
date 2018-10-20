@@ -10,10 +10,8 @@ public class Weapon : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        //animator.SetBool("IsShooting", false);
         if (Input.GetButtonDown("Fire1")){
             StartCoroutine(Shoot());
-            //animator.SetBool("IsShooting", true);
         }
     }
 
